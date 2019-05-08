@@ -8,4 +8,6 @@ import org.springframework.data.domain.Pageable;
 public interface UserService {
 
     Page<User> findAll(UserFilter userFilter, Pageable pageable);
+
+    Page<User> findAllWithQueryDSLFiltering(UserFilter userFilter, Pageable pageable);
 }

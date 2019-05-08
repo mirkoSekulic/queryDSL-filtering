@@ -2,11 +2,14 @@ package com.querydsltips.filtering.modules.users.specification;
 
 import com.querydsltips.filtering.modules.users.domain.User;
 import com.querydsltips.filtering.modules.users.domain.User_;
-import com.querydsltips.filtering.modules.users.domain.Authority_;
 import com.querydsltips.filtering.modules.users.filter.UserFilter;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.jpa.domain.Specification;
 
-import javax.persistence.criteria.*;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,20 +33,16 @@ public class UserSpecification implements Specification<User> {
 
         List<Predicate> predicates = new ArrayList<>();
 
-        if (userFilter.getFirstName() != null) {
+        if (StringUtils.isNotBlank(userFilter.getFirstName())) {
             predicates.add(criteriaBuilder.like(root.get(User_.firstName), String.format(likeFormat, userFilter.getFirstName())));
         }
 
-        if (userFilter.getLastName() != null) {
+        if (StringUtils.isNotBlank(userFilter.getLastName())) {
             predicates.add(criteriaBuilder.like(root.get(User_.lastName), String.format(likeFormat, userFilter.getLastName())));
         }
 
-        if(userFilter.getEmail() != null) {
-            predicates.add(criteriaBuilder.like(root.get(User_.email), String.format(likeFormat, userFilter.getEmail())));
-        }
-
-        if (userFilter.getRoles() != null && !userFilter.getRoles().isEmpty()) {
-            predicates.add(root.join(User_.authorities).get(Authority_.code).in(userFilter.getRoles()));
+        if (StringUtils.isNotBlank(userFilter.getUsername())) {
+            predicates.add(root.get(User_.username).in(userFilter.getUsername()));
         }
 
 

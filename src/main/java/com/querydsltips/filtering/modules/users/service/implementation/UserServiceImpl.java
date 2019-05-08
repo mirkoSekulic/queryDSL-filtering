@@ -2,6 +2,7 @@ package com.querydsltips.filtering.modules.users.service.implementation;
 
 import com.querydsltips.filtering.modules.users.domain.User;
 import com.querydsltips.filtering.modules.users.filter.UserFilter;
+import com.querydsltips.filtering.modules.users.predicate.UserPredicateFactory;
 import com.querydsltips.filtering.modules.users.repository.UserRepository;
 import com.querydsltips.filtering.modules.users.service.UserService;
 import com.querydsltips.filtering.modules.users.specification.UserSpecification;
@@ -24,5 +25,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public Page<User> findAll(@NotNull UserFilter userFilter, Pageable pageable) {
         return userRepository.findAll(UserSpecification.of(userFilter), pageable);
+    }
+
+    @Override
+    public Page<User> findAllWithQueryDSLFiltering(UserFilter userFilter, Pageable pageable) {
+        return userRepository.findAll(UserPredicateFactory.createUserFilterPredicate(userFilter), pageable);
     }
 }

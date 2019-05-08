@@ -17,6 +17,7 @@ public abstract class User_ {
 	public static volatile SingularAttribute<User, Long> id;
 	public static volatile SingularAttribute<User, String> email;
 	public static volatile SetAttribute<User, Authority> authorities;
+	public static volatile SingularAttribute<User, String> username;
 	public static volatile SingularAttribute<User, Boolean> activated;
 
 	public static final String FIRST_NAME = "firstName";
@@ -26,6 +27,7 @@ public abstract class User_ {
 	public static final String ID = "id";
 	public static final String EMAIL = "email";
 	public static final String AUTHORITIES = "authorities";
+	public static final String USERNAME = "username";
 	public static final String ACTIVATED = "activated";
 
 }

@@ -35,4 +35,14 @@ public class UserController {
 
         return new ResponseEntity<>(userDTOPage, HttpStatus.OK);
     }
+
+    @GetMapping("filtering/queryDSL")
+    @ApiOperation(value = "Get a page of user accounts..", nickname = "finAll")
+    public ResponseEntity<Page<UserDTO>> findAll(Pageable pageable, UserFilter userFilter)
+    {
+        Page<UserDTO> userDTOPage = userService.findAllWithQueryDSLFiltering(userFilter, pageable)
+                .map(userMapper::userToUserDTOWithoutAuthorities);
+
+        return new ResponseEntity<>(userDTOPage, HttpStatus.OK);
+    }
 }

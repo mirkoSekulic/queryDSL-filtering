@@ -1,8 +1,8 @@
 /home/logate/github/queryDSL-filtering/src/main/java/com/querydsltips/filtering/modules/users/specification/UserSpecification.java
 /home/logate/github/queryDSL-filtering/src/main/java/com/querydsltips/filtering/modules/users/domain/Authority.java
 /home/logate/github/queryDSL-filtering/src/main/java/com/querydsltips/filtering/modules/users/controller/UserController.java
+/home/logate/github/queryDSL-filtering/src/main/java/com/querydsltips/filtering/modules/users/predicate/UserPredicateFactory.java
 /home/logate/github/queryDSL-filtering/src/main/java/com/querydsltips/filtering/modules/users/repository/UserRepository.java
-/home/logate/github/queryDSL-filtering/src/main/java/com/querydsltips/filtering/modules/shared/util/MapperUtil.java
 /home/logate/github/queryDSL-filtering/src/main/java/com/querydsltips/filtering/modules/users/filter/UserFilter.java
 /home/logate/github/queryDSL-filtering/src/main/java/com/querydsltips/filtering/modules/users/mapper/UserMapper.java
 /home/logate/github/queryDSL-filtering/src/main/java/com/querydsltips/filtering/config/SecurityConfig.java
@@ -11,4 +11,6 @@
 /home/logate/github/queryDSL-filtering/src/main/java/com/querydsltips/filtering/FilteringApplication.java
 /home/logate/github/queryDSL-filtering/src/main/java/com/querydsltips/filtering/modules/users/dto/UserDTO.java
 /home/logate/github/queryDSL-filtering/src/main/java/com/querydsltips/filtering/modules/users/service/implementation/UserServiceImpl.java
+/home/logate/github/queryDSL-filtering/target/generated-sources/java/com/querydsltips/filtering/modules/users/domain/QAuthority.java
 /home/logate/github/queryDSL-filtering/src/main/java/com/querydsltips/filtering/modules/users/service/UserService.java
+/home/logate/github/queryDSL-filtering/target/generated-sources/java/com/querydsltips/filtering/modules/users/domain/QUser.java

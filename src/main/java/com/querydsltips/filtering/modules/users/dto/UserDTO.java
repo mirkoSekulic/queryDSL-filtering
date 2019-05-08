@@ -7,10 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -38,6 +35,11 @@ public class UserDTO implements Serializable
     @Size(max = 50)
     @NotEmpty
     private String lastName;
+
+    @NotBlank
+    @Pattern(regexp = "^[_'.@A-Za-z0-9-]*$")
+    @Size(min = 1, max = 50)
+    private String username;
 
     @Email
     @Size(min = 5, max = 100)

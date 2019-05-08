@@ -4,10 +4,12 @@ com/querydsltips/filtering/modules/users/service/implementation/UserServiceImpl.
 com/querydsltips/filtering/modules/users/domain/Authority.class
 com/querydsltips/filtering/modules/users/domain/Authority_.class
 com/querydsltips/filtering/modules/users/domain/User.class
+com/querydsltips/filtering/modules/users/domain/QUser.class
+com/querydsltips/filtering/modules/users/domain/QAuthority.class
 com/querydsltips/filtering/modules/users/controller/UserController.class
 com/querydsltips/filtering/FilteringApplication.class
+com/querydsltips/filtering/modules/users/predicate/UserPredicateFactory.class
 com/querydsltips/filtering/config/SecurityConfig.class
-com/querydsltips/filtering/modules/shared/util/MapperUtil.class
 com/querydsltips/filtering/modules/users/filter/UserFilter.class
 com/querydsltips/filtering/modules/users/repository/UserRepository.class
 com/querydsltips/filtering/modules/users/mapper/UserMapper.class
