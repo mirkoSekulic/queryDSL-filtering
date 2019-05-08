@@ -1,5 +1,0 @@
-
-Hsquid:S1481"*Remove this unused "qUser" local variable.(Ñã†‡8†ùÉ³©-
-Wsquid:S1854"9Remove this useless assignment to local variable "qUser".(Ñã†‡8†ùÉ³©-
-Osquid:S1172"1Remove this unused method parameter "userFilter".(±³Â8‡´²³©-
-jsquid:UnusedPrivateMethod">Remove this unused private "createUserFilterPredicate" method.(…›îØ8‡´²³©-
